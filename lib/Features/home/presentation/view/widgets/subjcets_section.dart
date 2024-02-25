@@ -1,15 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gyansanchaar_app/Features/home/presentation/view/widgets/subject_card.dart';
-import 'package:gyansanchaar_app/Features/home/presentation/view_model/subject_card_model.dart';
-import 'package:gyansanchaar_app/core/utils/constants/constants.dart';
-import 'package:gyansanchaar_app/core/utils/constants/methods.dart';
+import 'package:gyansanchaar_app/Features/home/data/model/subject_card_model.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_colors.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_text_styles.dart';
 import 'package:gyansanchaar_app/core/utils/constants/widgets/vertical_and_horizontal_space.dart';
-import 'package:gyansanchaar_app/core/utils/paints/subject_custom_paint.dart';
-import 'package:gyansanchaar_app/core/utils/paints/subject_paint_line.dart';
 
 class SubjectsSection extends StatelessWidget {
   const SubjectsSection({super.key});

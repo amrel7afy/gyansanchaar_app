@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
-class MyColors{
+abstract class MyColors{
   static const  kPrimaryColor=Color(0xffEBB12B);
   static const  kRedColor=Color(0xffFF7648);
   static const  kSecondaryColor=Color(0xffBCC1CD);
 
   static const  kAlertButtonColor=Color(0xffEBEEFF);
   static const  kCardColor=Color(0xfffcf1d6);
+  static const  kSeeMoreTextColor=Color(0xff0D173B);
 
 
 

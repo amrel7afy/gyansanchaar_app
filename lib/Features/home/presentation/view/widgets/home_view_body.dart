@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:gyansanchaar_app/Features/home/presentation/view/widgets/actions_section.dart';
 import 'package:gyansanchaar_app/Features/home/presentation/view/widgets/home_view_app_bar.dart';
 import 'package:gyansanchaar_app/Features/home/presentation/view/widgets/schedule_section.dart';
 import 'package:gyansanchaar_app/Features/home/presentation/view/widgets/subjcets_section.dart';
@@ -27,12 +30,14 @@ class HomeViewBody extends StatelessWidget {
                 ScheduleSection(),
                 VerticalSpacer(43),
                 QuickLinksSection(),
-                VerticalSpacer(28),
-
+                VerticalSpacer(23),
+                ActionsSection(),
+                VerticalSpacer(23),
               ],
             ),
           ),
-        )
+        ),
+
       ],
     );
   }

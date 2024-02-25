@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gyansanchaar_app/Features/home/presentation/view/widgets/subjcets_section.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_colors.dart';
 
 class SubjectCardModel {
