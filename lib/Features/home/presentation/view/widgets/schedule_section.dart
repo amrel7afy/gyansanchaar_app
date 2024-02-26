@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gyansanchaar_app/Features/home/presentation/view/widgets/schedule_card.dart';
+import 'package:gyansanchaar_app/Features/home/presentation/view/widgets/see_more_text.dart';
+import 'package:gyansanchaar_app/core/utils/AppRouter.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_text_styles.dart';
 import 'package:gyansanchaar_app/core/utils/constants/widgets/vertical_and_horizontal_space.dart';
 
@@ -29,12 +31,9 @@ class ScheduleSection extends StatelessWidget {
                     .copyWith(color: MyColors.kSecondaryColor),
               ),
               const Spacer(),
-              Text(
-                'see more',
-                style: MyTextStyles.mediumTextStyle14.copyWith(
-                    decoration: TextDecoration.underline,
-                    color: const Color(0xff0D173B)),
-              )
+              SeeMoreButton(onTap: (){
+                Navigator.pushNamed(context, AppRouter.scheduleView);
+              },),
             ],
           ),
         ),
