@@ -28,7 +28,7 @@ class ScheduleSection extends StatelessWidget {
               Text(
                 'Next lessons',
                 style: MyTextStyles.boldTextStyle14
-                    .copyWith(color: MyColors.kSecondaryColor),
+                    .copyWith(color: MyColors.kGreyColor),
               ),
               const Spacer(),
               SeeMoreButton(onTap: (){

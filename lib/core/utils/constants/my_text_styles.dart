@@ -202,4 +202,20 @@ abstract class MyTextStyles {
     fontWeight: FontWeight.w700,
     fontFamily: kDMans,
   );
+  //----------------------------------------------
+  static const mediumTextStyle44 = TextStyle(
+    fontSize: 44,
+    fontWeight: FontWeight.w500,
+    fontFamily: kDMans,
+  );
+  static const semiBoldTextStyle44 = TextStyle(
+    fontSize: 44,
+    fontWeight: FontWeight.w600,
+    fontFamily: kDMans,
+  );
+  static const boldTextStyle44 = TextStyle(
+    fontSize: 44,
+    fontWeight: FontWeight.w700,
+    fontFamily: kDMans,
+  );
 }

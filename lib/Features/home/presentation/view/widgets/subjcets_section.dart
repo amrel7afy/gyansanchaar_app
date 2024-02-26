@@ -21,7 +21,7 @@ class SubjectsSection extends StatelessWidget {
         Text(
           'Recommendations for you',
           style: MyTextStyles.boldTextStyle14
-              .copyWith(color: MyColors.kSecondaryColor),
+              .copyWith(color: MyColors.kGreyColor),
         ),
         const VerticalSpacer(16),
         SizedBox(

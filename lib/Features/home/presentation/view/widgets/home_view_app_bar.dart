@@ -54,7 +54,7 @@ class HomeViewAppBar extends StatelessWidget {
             Text(
               'English teacher',
               style: MyTextStyles.mediumTextStyle14
-                  .copyWith(color: MyColors.kSecondaryColor),
+                  .copyWith(color: MyColors.kGreyColor),
             )
           ],
         );

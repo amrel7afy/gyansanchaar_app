@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gyansanchaar_app/Features/schedule/presentation/view/widgets/custom_data_picker.dart';
+import 'package:gyansanchaar_app/Features/schedule/presentation/view/widgets/schedule_view_app_bar.dart';
 import 'package:gyansanchaar_app/core/utils/constants/constants.dart';
 
 class ScheduleViewBody extends StatelessWidget {
@@ -12,11 +13,13 @@ class ScheduleViewBody extends StatelessWidget {
       slivers: [
         SliverToBoxAdapter(
           child: Padding(
-            padding:
-                EdgeInsets.only(left: kLeftHomeViewPadding, top: 5, right: 20),
+            padding: EdgeInsets.only(
+                left: kLeftHomeViewPadding, top: 5, right: 20),
             child: Column(
               children: [
-                CustomDatePicker(),
+                ScheduleViewAppBar(),
+                CustomDatePicker()
+
               ],
             ),
           ),
@@ -25,3 +28,6 @@ class ScheduleViewBody extends StatelessWidget {
     );
   }
 }
+
+
+
