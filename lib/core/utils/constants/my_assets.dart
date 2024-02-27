@@ -5,4 +5,7 @@ class MyAssets{
   static const syllabus='assets/images/icons/syllabus.svg';
   static const tests='assets/images/icons/tests.svg';
   static const attendance='assets/images/icons/attendance.svg';
+  static const  twoVerticalDots='assets/images/icons/two_vertical_dots.svg';
+  static const  location='assets/images/icons/location.svg';
+
 }

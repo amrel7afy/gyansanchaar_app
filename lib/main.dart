@@ -8,11 +8,11 @@ import 'package:flutter/material.dart';
 import 'core/utils/constants/theme.dart';
 //dart fix --apply --code=unused_import
 void main(){
-  runApp(const BooklyApp());
+  runApp(const GyansanchaarApp());
 }
 
-class BooklyApp extends StatelessWidget{
-  const BooklyApp({super.key});
+class GyansanchaarApp extends StatelessWidget{
+  const GyansanchaarApp({super.key});
 
   @override
   Widget build(BuildContext context) {
