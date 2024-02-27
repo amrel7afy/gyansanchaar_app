@@ -7,5 +7,6 @@ class MyAssets{
   static const attendance='assets/images/icons/attendance.svg';
   static const  twoVerticalDots='assets/images/icons/two_vertical_dots.svg';
   static const  location='assets/images/icons/location.svg';
+  static const  created='assets/images/created.svg';
 
 }

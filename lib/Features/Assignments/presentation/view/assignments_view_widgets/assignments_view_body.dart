@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:gyansanchaar_app/core/utils/constants/constants.dart';
@@ -9,6 +10,7 @@ import 'package:gyansanchaar_app/core/utils/constants/my_colors.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_text_styles.dart';
 import 'package:gyansanchaar_app/core/utils/constants/widgets/custom_button.dart';
 import 'package:gyansanchaar_app/core/utils/constants/widgets/search_field.dart';
+import 'package:gyansanchaar_app/core/utils/constants/widgets/show_dialog_method.dart';
 import 'package:gyansanchaar_app/core/utils/constants/widgets/vertical_and_horizontal_space.dart';
 
 class AssignmentsViewBody extends StatelessWidget {
@@ -53,7 +55,7 @@ class AssignmentsViewBody extends StatelessWidget {
                 const DefaultFormField(
                   prefixTitle: 'Time',
                 ),
-                DefaultFormField(
+                const DefaultFormField(
                   prefixTitle: 'Repeat',
                 ),
                 const VerticalSpacer(28),
@@ -69,10 +71,14 @@ class AssignmentsViewBody extends StatelessWidget {
                   width: getWidth(context),
                   child: CustomButton(
                     borderRadius: BorderRadius.circular(10),
-                    textStyle: MyTextStyles.boldTextStyle20.copyWith(color: Colors.white),
+                    textStyle: MyTextStyles.boldTextStyle20
+                        .copyWith(color: Colors.white),
                     text: 'Create',
                     backGroundColor: MyColors.kPrimaryColor,
-                    onPressed: () {},
+                    onPressed: () {
+
+                      buildShowDialog(context, title: 'Created Successfully', subTitle: 'Your Assignment has been Created successfully ');
+                    },
                   ),
                 )
               ],
@@ -82,4 +88,6 @@ class AssignmentsViewBody extends StatelessWidget {
       ],
     );
   }
+
+
 }

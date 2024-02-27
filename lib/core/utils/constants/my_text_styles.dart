@@ -185,6 +185,11 @@ abstract class MyTextStyles {
       fontWeight: FontWeight.w700,
       fontFamily: kDMans,
       color: MyColors.kPrimaryColor);
+  static const extraBoldTextStyle24 = TextStyle(
+      fontSize: 24,
+      fontWeight: FontWeight.w900,
+      fontFamily: kDMans,
+      color: MyColors.kPrimaryColor);
 
   //----------------------------------------------
   static const mediumTextStyle30 = TextStyle(
