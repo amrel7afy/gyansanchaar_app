@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:gyansanchaar_app/Features/home/presentation/view/widgets/schedule_painter.dart';
+import 'package:gyansanchaar_app/Features/home/presentation/view/home_view_widgets/schedule_painter.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_text_styles.dart';
 import 'package:gyansanchaar_app/core/utils/constants/widgets/vertical_and_horizontal_space.dart';
 

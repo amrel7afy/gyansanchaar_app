@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gyansanchaar_app/Features/home/data/model/quick_link_model.dart';
-import 'package:gyansanchaar_app/Features/home/presentation/view/widgets/quick_link_card.dart';
-import 'package:gyansanchaar_app/Features/home/presentation/view/widgets/see_more_text.dart';
+import 'package:gyansanchaar_app/Features/home/presentation/view/home_view_widgets/quick_link_card.dart';
+import 'package:gyansanchaar_app/Features/home/presentation/view/home_view_widgets/see_more_text.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_text_styles.dart';
 
 class QuickLinksSection extends StatelessWidget {

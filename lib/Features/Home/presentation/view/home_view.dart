@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gyansanchaar_app/Features/home/presentation/view/widgets/home_view_body.dart';
+import 'package:gyansanchaar_app/Features/home/presentation/view/home_view_widgets/home_view_body.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});

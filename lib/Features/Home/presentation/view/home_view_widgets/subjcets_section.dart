@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:gyansanchaar_app/Features/home/presentation/view/widgets/subject_card.dart';
+import 'package:gyansanchaar_app/Features/home/presentation/view/home_view_widgets/subject_card.dart';
 import 'package:gyansanchaar_app/Features/home/data/model/subject_card_model.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_colors.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_text_styles.dart';

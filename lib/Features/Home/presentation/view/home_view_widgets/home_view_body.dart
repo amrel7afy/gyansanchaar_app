@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:gyansanchaar_app/Features/home/presentation/view/widgets/actions_section.dart';
-import 'package:gyansanchaar_app/Features/home/presentation/view/widgets/home_view_app_bar.dart';
-import 'package:gyansanchaar_app/Features/home/presentation/view/widgets/schedule_section.dart';
-import 'package:gyansanchaar_app/Features/home/presentation/view/widgets/subjcets_section.dart';
+import 'package:gyansanchaar_app/Features/home/presentation/view/home_view_widgets/actions_section.dart';
+import 'package:gyansanchaar_app/Features/home/presentation/view/home_view_widgets/home_view_app_bar.dart';
+import 'package:gyansanchaar_app/Features/home/presentation/view/home_view_widgets/schedule_section.dart';
+import 'package:gyansanchaar_app/Features/home/presentation/view/home_view_widgets/subjcets_section.dart';
 import 'package:gyansanchaar_app/core/utils/constants/constants.dart';
 import 'package:gyansanchaar_app/core/utils/constants/widgets/vertical_and_horizontal_space.dart';
 

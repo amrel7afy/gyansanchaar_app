@@ -38,6 +38,8 @@ dependencies:
   flutter_svg:
   dio:
   date_picker_timeline:
+  google_fonts:
+  font_awesome_flutter:
 
 
 dev_dependencies:

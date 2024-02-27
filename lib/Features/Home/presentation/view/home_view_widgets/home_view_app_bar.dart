@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
+
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:gyansanchaar_app/Features/home/presentation/view/widgets/profile_avatar.dart';
+import 'package:gyansanchaar_app/Features/home/presentation/view/home_view_widgets/profile_avatar.dart';
 import 'package:gyansanchaar_app/core/utils/constants/constants.dart';
 import 'package:gyansanchaar_app/core/utils/constants/methods.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_colors.dart';
