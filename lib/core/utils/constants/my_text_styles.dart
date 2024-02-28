@@ -23,6 +23,11 @@ abstract class MyTextStyles {
     fontFamily: kDMans,
     color: Colors.white,
   );
+  static const extraBoldTextStyle10 = TextStyle(
+      fontSize: 10,
+      fontWeight: FontWeight.w900,
+      fontFamily: kDMans,
+      color: MyColors.kPrimaryColor);
 
   //----------------------------------------------
 
@@ -44,6 +49,12 @@ abstract class MyTextStyles {
     fontFamily: kDMans,
     color: Color(0xff383838),
   );
+  static const extraBoldTextStyle12 = TextStyle(
+      fontSize: 12,
+      fontWeight: FontWeight.w900,
+      fontFamily: kDMans,
+      color: MyColors.kPrimaryColor);
+
   //----------------------------------------------
   static const mediumTextStyle13 = TextStyle(
     fontSize: 13,
@@ -63,6 +74,11 @@ abstract class MyTextStyles {
     fontFamily: kDMans,
     color: Color(0xff383838),
   );
+  static const extraBoldTextStyle13 = TextStyle(
+      fontSize: 13,
+      fontWeight: FontWeight.w900,
+      fontFamily: kDMans,
+      color: MyColors.kPrimaryColor);
 
   //----------------------------------------------
   static const mediumTextStyle14 = TextStyle(
@@ -80,6 +96,11 @@ abstract class MyTextStyles {
     fontWeight: FontWeight.w700,
     fontFamily: kDMans,
   );
+  static const extraBoldTextStyle14 = TextStyle(
+      fontSize: 14,
+      fontWeight: FontWeight.w900,
+      fontFamily: kDMans,
+      color: MyColors.kPrimaryColor);
 
   //----------------------------------------------
   static const mediumTextStyle15 = TextStyle(
@@ -97,6 +118,11 @@ abstract class MyTextStyles {
     fontWeight: FontWeight.w700,
     fontFamily: kDMans,
   );
+  static const extraBoldTextStyle15 = TextStyle(
+      fontSize: 15,
+      fontWeight: FontWeight.w900,
+      fontFamily: kDMans,
+      color: MyColors.kPrimaryColor);
 
   //----------------------------------------------
   static const mediumTextStyle16 = TextStyle(
@@ -114,6 +140,11 @@ abstract class MyTextStyles {
     fontWeight: FontWeight.w700,
     fontFamily: kDMans,
   );
+  static const extraBoldTextStyle16 = TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.w900,
+      fontFamily: kDMans,
+      color: MyColors.kPrimaryColor);
 
   //----------------------------------------------
   static const mediumTextStyle18 = TextStyle(
@@ -131,6 +162,11 @@ abstract class MyTextStyles {
     fontWeight: FontWeight.w700,
     fontFamily: kDMans,
   );
+  static const extraBoldTextStyle18 = TextStyle(
+      fontSize: 18,
+      fontWeight: FontWeight.w900,
+      fontFamily: kDMans,
+      color: MyColors.kPrimaryColor);
 
   //----------------------------------------------
   static const mediumTextStyle20 = TextStyle(
@@ -148,6 +184,11 @@ abstract class MyTextStyles {
     fontWeight: FontWeight.w700,
     fontFamily: kDMans,
   );
+  static const extraBoldTextStyle20 = TextStyle(
+      fontSize: 20,
+      fontWeight: FontWeight.w900,
+      fontFamily: kDMans,
+      color: MyColors.kPrimaryColor);
 
   //----------------------------------------------
   static const mediumTextStyle22 = TextStyle(
@@ -167,6 +208,11 @@ abstract class MyTextStyles {
     fontFamily: kDMans,
     color: Color(0xff383838),
   );
+  static const extraBoldTextStyle22 = TextStyle(
+      fontSize: 22,
+      fontWeight: FontWeight.w900,
+      fontFamily: kDMans,
+      color: MyColors.kPrimaryColor);
 
   //----------------------------------------------
 
@@ -207,6 +253,12 @@ abstract class MyTextStyles {
     fontWeight: FontWeight.w700,
     fontFamily: kDMans,
   );
+  static const extraBoldTextStyle30 = TextStyle(
+      fontSize: 30,
+      fontWeight: FontWeight.w900,
+      fontFamily: kDMans,
+      color: MyColors.kPrimaryColor);
+
   //----------------------------------------------
   static const mediumTextStyle44 = TextStyle(
     fontSize: 44,
@@ -223,4 +275,9 @@ abstract class MyTextStyles {
     fontWeight: FontWeight.w700,
     fontFamily: kDMans,
   );
+  static const extraBoldTextStyle44 = TextStyle(
+      fontSize: 44,
+      fontWeight: FontWeight.w900,
+      fontFamily: kDMans,
+      color: MyColors.kPrimaryColor);
 }

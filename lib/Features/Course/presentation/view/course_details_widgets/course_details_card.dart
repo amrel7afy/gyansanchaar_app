@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:gyansanchaar_app/core/utils/AppRouter.dart';
 import 'package:gyansanchaar_app/core/utils/constants/constants.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_assets.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_colors.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_text_styles.dart';
 import 'package:gyansanchaar_app/core/utils/constants/widgets/vertical_and_horizontal_space.dart';
 
-class CourseCard extends StatelessWidget {
-  final Color backGroundColor;
-
-  const CourseCard({
+class CourseDetailsCard extends StatelessWidget {
+  const CourseDetailsCard({
     super.key,
     required this.backGroundColor,
   });
+
+  final Color backGroundColor;
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +24,9 @@ class CourseCard extends StatelessWidget {
         ? Colors.white.withOpacity(0.3)
         : MyColors.kGreyColor.withOpacity(0.5);
     return GestureDetector(
-      onTap: () => Navigator.pushNamed(context, AppRouter.courseDetailsView),
+      onTap: () {},
       child: Container(
-        height: 115,
+        height: 200,
         padding: const EdgeInsets.all(12),
         margin: const EdgeInsets.only(bottom: 15),
         decoration: BoxDecoration(
@@ -61,6 +60,54 @@ class CourseCard extends StatelessWidget {
                   height: 50,
                 )
               ],
+            ),
+            const VerticalSpacer(16),
+            Row(
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Assignments',
+                      style: MyTextStyles.mediumTextStyle10
+                          .copyWith(color: indicatorColor, fontFamily: raleWay),
+                    ),
+                    Text(
+                      '2 / 5',
+                      style: MyTextStyles.mediumTextStyle10
+                          .copyWith(color: indicatorColor, fontFamily: raleWay),
+                    ),
+                  ],
+                ),
+                const Spacer(),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Group work',
+                      style: MyTextStyles.mediumTextStyle10
+                          .copyWith(color: indicatorColor, fontFamily: raleWay),
+                    ),
+                    Text(
+                      '2 / 2',
+                      style: MyTextStyles.mediumTextStyle10
+                          .copyWith(color: indicatorColor, fontFamily: raleWay),
+                    ),
+                  ],
+                ),
+                const Spacer()
+              ],
+            ),
+            const VerticalSpacer(12),
+            Text(
+              'Submission-',
+              style: MyTextStyles.extraBoldTextStyle12
+                  .copyWith(color: indicatorColor, fontFamily: raleWay),
+            ),
+            Text(
+              'Assignment due on the 21st of April at 11:59 pm',
+              style: MyTextStyles.mediumTextStyle12
+                  .copyWith(color: textColor, fontFamily: raleWay),
             ),
             const VerticalSpacer(16),
             LinearProgressIndicator(

@@ -15,7 +15,7 @@ class CourseTimeLineCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 143,
+      height: 140,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -37,7 +37,7 @@ class CourseTimeLineCard extends StatelessWidget {
           const SizedBox(
               height: 143,
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 18),
+                padding: EdgeInsets.symmetric(horizontal: 10),
                 child: VerticalDivider(
                   width: 0.5,
                   thickness: 1,

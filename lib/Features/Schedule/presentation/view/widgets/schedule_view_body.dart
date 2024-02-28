@@ -30,6 +30,7 @@ class ScheduleViewBody extends StatelessWidget {
             ),
           ),
         ),
+
         TimeLineSection(padding: padding)
       ],
     );

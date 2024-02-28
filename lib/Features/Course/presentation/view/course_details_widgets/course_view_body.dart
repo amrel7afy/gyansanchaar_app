@@ -1,0 +1,42 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+import 'package:flutter/widgets.dart';
+import 'package:gyansanchaar_app/Features/Course/presentation/view/course_details_widgets/course_details_card.dart';
+import 'package:gyansanchaar_app/core/utils/constants/my_colors.dart';
+
+import '../../../../../core/utils/constants/constants.dart';
+
+class CourseDetailsViewBody extends StatelessWidget {
+  const CourseDetailsViewBody({super.key});
+
+  getBackGroundColor(index) {
+    if (index == 0 || index % 2 == 0) {
+      return MyColors.kPrimaryColor;
+    } else {
+      return MyColors.kCardColor;
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return const CustomScrollView(
+      physics: BouncingScrollPhysics(),
+      slivers: [
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: kLeftCourseViewPadding),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                CourseDetailsCard(
+                  backGroundColor: MyColors.kPrimaryColor,
+                )
+              ],
+            ),
+          ),
+        )
+      ],
+    );
+  }
+}

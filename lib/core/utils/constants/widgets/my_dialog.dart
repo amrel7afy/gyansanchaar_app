@@ -17,9 +17,9 @@ class MyDialog extends StatelessWidget {
     return Align(
       alignment: Alignment.center,
       child: Container(
-        height: getHeight(context) * 0.4,
+        height: getHeight(context) * 0.45,
         width: getWidth(context) * 0.8,
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(24)),
@@ -37,10 +37,10 @@ class MyDialog extends StatelessWidget {
           ),
           SvgPicture.asset(
             MyAssets.created,
-            width: 160,
-            height: 160,
+            width: getWidth(context)*0.4,
+            height: getHeight(context)*0.2,
           ),
-          const VerticalSpacer(38),
+          const VerticalSpacer(20),
            Text(
             title,
             style: MyTextStyles.extraBoldTextStyle24,

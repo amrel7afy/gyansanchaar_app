@@ -19,7 +19,7 @@ class TimeLineSection extends StatelessWidget {
     return SliverFillRemaining(
       child: Container(
         margin: padding,
-        padding: const EdgeInsets.only(left: 23, right: 32, top: 23),
+        padding: const EdgeInsets.only(left: 16, right: 16, top: 23),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(32),
             color: MyColors.kCardColor),
@@ -32,7 +32,7 @@ class TimeLineSection extends StatelessWidget {
                   style: MyTextStyles.mediumTextStyle14
                       .copyWith(color: MyColors.kExtraGreyColor),
                 ),
-                const HorizontalSpacer(45),
+                const HorizontalSpacer(28),
                 Text('Course',
                     style: MyTextStyles.mediumTextStyle14
                         .copyWith(color: MyColors.kExtraGreyColor))
@@ -44,10 +44,9 @@ class TimeLineSection extends StatelessWidget {
                   itemCount: 10,
                   shrinkWrap: true,
                   itemBuilder: (context, index) => CourseTimeLineCard(
-                    backGroundColor: index == 0
-                        ? MyColors.kPrimaryColor
-                        : Colors.white,
-                  )),
+                        backGroundColor:
+                            index == 0 ? MyColors.kPrimaryColor : Colors.white,
+                      )),
             ),
           ],
         ),

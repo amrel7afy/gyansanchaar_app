@@ -1,6 +1,7 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
+
 import 'package:flutter/widgets.dart';
 import 'package:gyansanchaar_app/Features/Course/presentation/view/course_widgets/course_card.dart';
 import 'package:gyansanchaar_app/Features/Course/presentation/view/course_widgets/remaining_lectures_section.dart';
@@ -23,31 +24,35 @@ class CourseViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return CustomScrollView(
       physics: const BouncingScrollPhysics(),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: kLeftCourseViewPadding),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            ListView.builder(
-              physics: const NeverScrollableScrollPhysics(),
-              shrinkWrap: true,
-              itemCount: 4,
-              itemBuilder: (BuildContext context, int index) {
-                return CourseCard(
+      slivers: [
+        SliverPadding(
+          padding:  const EdgeInsets.symmetric(horizontal: kLeftCourseViewPadding),
+          sliver: SliverList(
+            delegate:
+            SliverChildBuilderDelegate((context, index) =>
+                CourseCard(
                   backGroundColor: getBackGroundColor(index),
-                );
-              },
-            ),
-            const VerticalSpacer(54),
-            const RemainingLecturesSection(),
-            const VerticalSpacer(48),
-            const QuickLinksSection(),
-            const VerticalSpacer(30),
-          ],
+                ),childCount: 10),
+          ),
         ),
-      ),
+        const SliverToBoxAdapter(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: kLeftCourseViewPadding),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                VerticalSpacer(54),
+                RemainingLecturesSection(),
+                VerticalSpacer(48),
+                QuickLinksSection(),
+                VerticalSpacer(30),
+              ],
+            ),
+          ),
+        )
+      ],
     );
   }
 }
