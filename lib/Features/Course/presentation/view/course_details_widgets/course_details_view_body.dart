@@ -2,8 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter/widgets.dart';
+import 'package:gyansanchaar_app/Features/Course/presentation/view/course_details_widgets/course_assignment_card.dart';
 import 'package:gyansanchaar_app/Features/Course/presentation/view/course_details_widgets/course_details_card.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_colors.dart';
+import 'package:gyansanchaar_app/core/utils/constants/my_text_styles.dart';
+import 'package:gyansanchaar_app/core/utils/constants/widgets/vertical_and_horizontal_space.dart';
 
 import '../../../../../core/utils/constants/constants.dart';
 
@@ -31,7 +34,12 @@ class CourseDetailsViewBody extends StatelessWidget {
               children: [
                 CourseDetailsCard(
                   backGroundColor: MyColors.kPrimaryColor,
-                )
+                ),
+                VerticalSpacer(20),
+                Text('Assignments',style: MyTextStyles.semiBoldTextStyle20,),
+                VerticalSpacer(20),
+                CourseAssignmentCard()
+
               ],
             ),
           ),

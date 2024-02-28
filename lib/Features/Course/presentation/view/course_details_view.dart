@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gyansanchaar_app/Features/Course/presentation/view/course_details_widgets/course_view_body.dart';
+import 'package:gyansanchaar_app/Features/Course/presentation/view/course_details_widgets/course_details_view_body.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_colors.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_text_styles.dart';
 
