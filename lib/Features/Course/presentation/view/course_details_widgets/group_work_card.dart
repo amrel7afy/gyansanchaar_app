@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:gyansanchaar_app/core/utils/constants/constants.dart';
 import 'package:gyansanchaar_app/core/utils/constants/methods.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_colors.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_text_styles.dart';
 import 'package:gyansanchaar_app/core/utils/constants/widgets/vertical_and_horizontal_space.dart';
 
-class CourseAssignmentCard extends StatelessWidget {
-  const CourseAssignmentCard({super.key});
+
+class GroupWorkCard extends StatelessWidget {
+  const GroupWorkCard({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return  Container(
       width: double.infinity,
-      height: 160,
-      color: MyColors.kCardColor,
+      height: 130,
+      color: const Color(0xffcfd1d8),
       padding: const EdgeInsets.all(12),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -21,14 +23,13 @@ class CourseAssignmentCard extends StatelessWidget {
           Text(
             'Details',
             style: MyTextStyles.mediumTextStyle12
-                .copyWith(color: MyColors.kPrimaryColor, fontFamily: raleWay),
+                .copyWith( fontFamily: raleWay),
           ),
           const VerticalSpacer(2),
           SizedBox(
             width: getWidth(context) * 0.9,
             child: Text(
-              'Question on Photoelectric effect, Test your '
-              'understanding with practice problems and answer them carefully.',
+              '-',
               maxLines: 3,
               style: MyTextStyles.mediumTextStyle12.copyWith(
                 fontFamily: raleWay,
@@ -39,13 +40,13 @@ class CourseAssignmentCard extends StatelessWidget {
           Text(
             'Submission-',
             style: MyTextStyles.mediumTextStyle12
-                .copyWith(color: MyColors.kPrimaryColor, fontFamily: raleWay),
+                .copyWith( fontFamily: raleWay),
           ),
           const VerticalSpacer(2),
           SizedBox(
             width: getWidth(context) * 0.8,
             child: Text(
-              'Assignment due on the 21st of April at 11:59 pm.',
+              '-',
               maxLines: 1,
               style: MyTextStyles.mediumTextStyle12.copyWith(
                 fontFamily: raleWay,
@@ -56,12 +57,12 @@ class CourseAssignmentCard extends StatelessWidget {
           Row(
             children: [
               Text(
-                'Assignment',
-                style: MyTextStyles.mediumTextStyle14.copyWith(
-                    color: MyColors.kPrimaryColor,
+                'Add Group Work',
+                style: MyTextStyles.extraBoldTextStyle14.copyWith(
+                    color: Colors.white,
                     fontFamily: raleWay,
                     decoration: TextDecoration.underline,
-                    decorationColor: MyColors.kPrimaryColor),
+                    decorationColor: Colors.white),
               ),
               const Spacer(),
               GestureDetector(

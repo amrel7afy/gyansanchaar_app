@@ -9,6 +9,7 @@ import 'package:gyansanchaar_app/core/utils/constants/my_text_styles.dart';
 import 'package:gyansanchaar_app/core/utils/constants/widgets/vertical_and_horizontal_space.dart';
 
 import '../../../../../core/utils/constants/constants.dart';
+import 'group_work_card.dart';
 
 class CourseDetailsViewBody extends StatelessWidget {
   const CourseDetailsViewBody({super.key});
@@ -38,8 +39,11 @@ class CourseDetailsViewBody extends StatelessWidget {
                 VerticalSpacer(20),
                 Text('Assignments',style: MyTextStyles.semiBoldTextStyle20,),
                 VerticalSpacer(20),
-                CourseAssignmentCard()
-
+                CourseAssignmentCard(),
+                VerticalSpacer(20),
+                Text('Group work',style: MyTextStyles.semiBoldTextStyle20,),
+                VerticalSpacer(20),
+                GroupWorkCard()
               ],
             ),
           ),
