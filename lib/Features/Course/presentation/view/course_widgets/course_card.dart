@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:gyansanchaar_app/core/utils/constants/constants.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_assets.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_colors.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_text_styles.dart';
@@ -8,17 +8,22 @@ import 'package:gyansanchaar_app/core/utils/constants/widgets/vertical_and_horiz
 
 
 class CourseCard extends StatelessWidget {
+  final Color backGroundColor;
   const CourseCard({
-    super.key,
+    super.key, required this.backGroundColor,
   });
 
   @override
   Widget build(BuildContext context) {
+    Color textColor=backGroundColor == MyColors.kPrimaryColor?Colors.white:Colors.black;
+    Color indicatorColor=backGroundColor == MyColors.kPrimaryColor?Colors.white:MyColors.kPrimaryColor;
+    Color indicatorBackGroundColor=backGroundColor == MyColors.kPrimaryColor?Colors.white.withOpacity(0.3):MyColors.kGreyColor.withOpacity(0.5);
     return Container(
       height: 115,
       padding: const EdgeInsets.all(12),
+      margin: const EdgeInsets.only(bottom: 15),
       decoration: BoxDecoration(
-          color: MyColors.kPrimaryColor,
+          color: backGroundColor,
           borderRadius: BorderRadius.circular(8)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -33,17 +38,17 @@ class CourseCard extends StatelessWidget {
                   Text(
                     'Physics 211',
                     style: MyTextStyles.boldTextStyle16.copyWith(
-                        color: Colors.white,
+                        color: textColor,
                         fontFamily:
-                        GoogleFonts.raleway().fontFamily),
+                        raleWay),
                   ),
-                  VerticalSpacer(5),
+                  const VerticalSpacer(5),
                   Text(
                     'Prof.  Andrew Grey',
                     style: MyTextStyles.mediumTextStyle12.copyWith(
-                        color: Colors.white,
+                        color: textColor,
                         fontFamily:
-                        GoogleFonts.raleway().fontFamily),
+                        raleWay),
                   ),
                 ],
               ),
@@ -56,8 +61,8 @@ class CourseCard extends StatelessWidget {
           ),
           const VerticalSpacer(16),
           LinearProgressIndicator(
-            color: Colors.white,
-            backgroundColor: Colors.white.withOpacity(0.3),
+            color: indicatorColor,
+            backgroundColor: indicatorBackGroundColor,
             value: 0.68,
             borderRadius: BorderRadius.circular(10),
           ),
@@ -67,16 +72,16 @@ class CourseCard extends StatelessWidget {
               Text(
                 'Course outline progress',
                 style: MyTextStyles.mediumTextStyle10.copyWith(
-                    color: Colors.white,
-                    fontFamily: GoogleFonts.raleway().fontFamily),
+                    color: indicatorColor,
+                    fontFamily: raleWay),
               ),
               const Spacer(),
               Text(
                 '68%',
                 style: MyTextStyles.mediumTextStyle12.copyWith(
-                    color: Colors.white,
+                    color: indicatorColor,
                     fontFamily:
-                    GoogleFonts.raleway().fontFamily),
+                    raleWay),
               )
             ],
           ),

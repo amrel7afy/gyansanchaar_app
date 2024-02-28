@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_colors.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_text_styles.dart';
+
+import '../constants.dart';
 
 class DefaultFormField extends StatelessWidget {
   final int ? maxLines;
@@ -46,7 +47,7 @@ class DefaultFormField extends StatelessWidget {
             label: label,
             hintText: hint,
             hintStyle: MyTextStyles.semiBoldTextStyle14
-                .copyWith(fontFamily: GoogleFonts.raleway().fontFamily),
+                .copyWith(fontFamily: raleWay),
             suffixIcon: suffixWidget,
             prefixIcon: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -56,7 +57,7 @@ class DefaultFormField extends StatelessWidget {
                   child: Text(
                     prefixTitle ?? '',
                     style: MyTextStyles.mediumTextStyle14
-                        .copyWith(fontFamily: GoogleFonts.raleway().fontFamily),
+                        .copyWith(fontFamily: raleWay),
                   ),
                 ),
               ],
