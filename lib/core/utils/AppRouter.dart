@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gyansanchaar_app/Features/Attendance/presentation/view/attendance_view.dart';
+import 'package:gyansanchaar_app/Features/Course/presentation/view/course_view.dart';
 import 'package:gyansanchaar_app/Features/Extra/presentation/view/extra_view.dart';
 import 'package:gyansanchaar_app/Features/Syllabus/presentation/view/syllabus_view.dart';
 import 'package:gyansanchaar_app/Features/Tests/presentation/view/tests_view.dart';
@@ -16,6 +17,7 @@ class AppRouter {
   static const String extraView = '/extraView';
   static const String syllabusView = '/syllabusView';
   static const String testsView = '/testsView';
+  static const String courseView = '/courseView';
 
   Route? generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -33,6 +35,8 @@ class AppRouter {
         return MaterialPageRoute(builder: (context) => const SyllabusView());
       case testsView:
         return MaterialPageRoute(builder: (context) => const TestsView());
+      case courseView:
+        return MaterialPageRoute(builder: (context) => const CourseView());
     }
     return null;
   }

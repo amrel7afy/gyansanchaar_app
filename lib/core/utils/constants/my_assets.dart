@@ -8,5 +8,6 @@ class MyAssets{
   static const  twoVerticalDots='assets/images/icons/two_vertical_dots.svg';
   static const  location='assets/images/icons/location.svg';
   static const  created='assets/images/created.svg';
+  static const  atom='assets/images/atom.png';
 
 }
