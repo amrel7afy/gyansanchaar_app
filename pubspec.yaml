@@ -40,6 +40,7 @@ dependencies:
   date_picker_timeline:
   google_fonts:
   font_awesome_flutter:
+  get:
 
 
 dev_dependencies:

@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:gyansanchaar_app/Features/Attendance/presentation/data/models/student_model.dart';
+import 'package:gyansanchaar_app/Features/Attendance/presentation/view/attendance_view_widgets/table_check_boxes_row.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_colors.dart';
 
 import '../../../../../core/utils/constants/constants.dart';
 import '../../../../../core/utils/constants/my_text_styles.dart';
 
 class AttendanceTable extends StatelessWidget {
-  const AttendanceTable({Key? key});
+  const AttendanceTable({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -80,62 +82,11 @@ class AttendanceTable extends StatelessWidget {
             ),
           ),
         ),
-        TableCell(
-          child: Container(
-            margin: isLastRow
-                ? const EdgeInsets.only(top: 5)
-                : const EdgeInsets.symmetric(vertical: 5),
-            decoration: BoxDecoration(
-              border: Border.all(width: 0.7, color: MyColors.kGreyColor),
-            ),
-            child: Row(
-              children: [
-                const Spacer(),
-                buildCheckBoxItem(
-                    letter: 'P', activeColor: MyColors.kGreenColor),
-                const SizedBox(width: 10),
-                buildCheckBoxItem(
-                    letter: 'L', activeColor: MyColors.kPrimaryColor),
-                const SizedBox(width: 10),
-                buildCheckBoxItem(
-                    letter: 'A', activeColor: MyColors.kExtraRedColor),
-                const Spacer(),
-              ],
-            ),
-          ),
-        ),
+         TableCheckBoxes(isLastRow: isLastRow, attendanceStatus: AttendanceStatus.late,),
       ],
     );
   }
 }
 
-Widget buildCheckBoxItem({required String letter, required Color activeColor}) {
-  return Row(
-    children: [
-      Text(
-        letter,
-        style: MyTextStyles.mediumTextStyle20.copyWith(color: activeColor),
-      ),
-      const SizedBox(width: 4),
-      Theme(
-        data: ThemeData(
-          unselectedWidgetColor:
-          MyColors.kPrimaryColor, // Change the border color here
-        ),
-        child: SizedBox(
-          width: 25,
-          height: 39,
-          child: Checkbox(
-            value: false,
-            hoverColor:  MyColors.kGreyColor,
 
-            checkColor: Colors.white,
-            side: const BorderSide(color: MyColors.kGreyColor, width: 2.0),
-            activeColor: activeColor,
-            onChanged: (bool? value) {},
-          ),
-        ),
-      ),
-    ],
-  );
-}
+
