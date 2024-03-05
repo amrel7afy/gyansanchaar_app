@@ -1,71 +1,23 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:gyansanchaar_app/Features/Attendance/presentation/data/models/student_model.dart';
+import 'package:gyansanchaar_app/Features/Attendance/presentation/view_model/GetX/attendance_controller.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_colors.dart';
 
 import 'check_box_item.dart';
 
-class TableCheckBoxes extends StatefulWidget {
-  final bool isLastRow;
-   final AttendanceStatus attendanceStatus;
 
-   const TableCheckBoxes({
-    super.key,
-    this.isLastRow = false,
-    required this.attendanceStatus,
-  });
+class TableCheckBoxes extends StatelessWidget {
+   final StudentModel student;
 
-  @override
-  State<TableCheckBoxes> createState() => _TableCheckBoxesState();
-}
+  TableCheckBoxes({Key? key, required this.student}) : super(key: key);
 
-class _TableCheckBoxesState extends State<TableCheckBoxes> {
-   bool isPresent = false;
-
-   bool isLate = false;
-
-   bool isAbsent = false;
-
-   checkAttendance(AttendanceStatus attendanceStatus) {
-    bool value=true;
-    switch (attendanceStatus) {
-      case AttendanceStatus.present:
-        setState(() {
-          isPresent=value;
-          isLate = !value;
-          isAbsent = !value;
-        });
-        log('isPresent: $isPresent');
-
-      case AttendanceStatus.late:
-        setState(() {
-          isLate = value;
-          isPresent=!value;
-          isAbsent = !value;
-        });
-        log('isLate: $isLate');
-      case AttendanceStatus.absent:
-        setState(() {
-          isAbsent = value;
-          isLate = !value;
-          isPresent=!value;
-        });
-        log('isAbsent: $isAbsent');
-
-    }
-  }
-@override
-  void initState() {
-  checkAttendance(widget.attendanceStatus);
-    super.initState();
-  }
   @override
   Widget build(BuildContext context) {
-
     return TableCell(
       child: Container(
-        margin: widget.isLastRow
+        margin: student.isLastStudent
             ? const EdgeInsets.only(top: 5)
             : const EdgeInsets.symmetric(vertical: 5),
         decoration: BoxDecoration(
@@ -74,12 +26,41 @@ class _TableCheckBoxesState extends State<TableCheckBoxes> {
         child: Row(
           children: [
             const Spacer(),
-            buildCheckBoxItem(letter: 'P', activeColor: MyColors.kGreenColor,status: isPresent),
-            const SizedBox(width: 10),
-            buildCheckBoxItem(letter: 'L', activeColor: MyColors.kPrimaryColor,status: isLate),
+            buildCheckBoxItem(
+              letter: 'P',
+              activeColor: MyColors.kGreenColor,
+              status: student.attendanceStatus == AttendanceStatus.present,
+              onChanged: (bool? val) {
+                if (student.attendanceStatus != AttendanceStatus.present) {
+                  Get.find<AttendanceController>()
+                      .changeAttendanceStatusToPresent(student);
+                }
+              },
+            ),
             const SizedBox(width: 10),
             buildCheckBoxItem(
-                letter: 'A', activeColor: MyColors.kExtraRedColor,status: isAbsent),
+              letter: 'L',
+              activeColor: MyColors.kPrimaryColor,
+              status: student.attendanceStatus == AttendanceStatus.late,
+              onChanged: (bool? val) {
+                if (student.attendanceStatus != AttendanceStatus.late) {
+                  Get.find<AttendanceController>()
+                      .changeAttendanceStatusToLate(student);
+                }
+              },
+            ),
+            const SizedBox(width: 10),
+            buildCheckBoxItem(
+              letter: 'A',
+              activeColor: MyColors.kExtraRedColor,
+              status: student.attendanceStatus == AttendanceStatus.absent,
+              onChanged: (bool? val) {
+                if (student.attendanceStatus != AttendanceStatus.absent) {
+                  Get.find<AttendanceController>()
+                      .changeAttendanceStatusToAbsent(student);
+                }
+              },
+            ),
             const Spacer(),
           ],
         ),

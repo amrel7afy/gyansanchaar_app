@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gyansanchaar_app/Features/Attendance/presentation/view/attendance_view_widgets/attendace_table.dart';
+import 'package:gyansanchaar_app/Features/Attendance/presentation/view/attendance_view_widgets/attendance_table.dart';
 
 import '../../../../../core/utils/constants/constants.dart';
 
