@@ -19,7 +19,7 @@ abstract class MyColors{
   static const MaterialColor kMapPrimaryColor = MaterialColor(
     primaryValue,
     <int, Color>{
-      50: Color(0xffFFF7E3),
+      50: Color(0xfffff7e3),
       100: Color(0xffffc23f),
       200: Color(0xffffbf35),
       300: Color(0xfff7b322),

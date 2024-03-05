@@ -14,7 +14,7 @@ class CourseView extends StatelessWidget {
         leadingWidth: 80,
         leading: IconButton(
           icon: const Icon(
-            Icons.arrow_back_ios_new,
+            Icons.arrow_back_ios,
           ),
           onPressed: () => Navigator.pop(context),
         ),
@@ -27,4 +27,7 @@ class CourseView extends StatelessWidget {
       body: const SafeArea(child: CourseViewBody()),
     );
   }
+
 }
+
+

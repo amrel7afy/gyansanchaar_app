@@ -11,7 +11,7 @@ import 'check_box_item.dart';
 class TableCheckBoxes extends StatelessWidget {
    final StudentModel student;
 
-  TableCheckBoxes({Key? key, required this.student}) : super(key: key);
+  const TableCheckBoxes({super.key, required this.student});
 
   @override
   Widget build(BuildContext context) {
