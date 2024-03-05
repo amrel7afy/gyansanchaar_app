@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 abstract class MyColors{
   static const  kPrimaryColor=Color(0xffEBB12B);
   static const  kRedColor=Color(0xffFF7648);
+  static const  kExtraRedColor=Color(0xffE30016);
   static const  kGreyColor=Color(0xffBCC1CD);
   static const  kExtraGreyColor=Color(0xff8A8A8A);
+  static const  kGreenColor=Color(0xff29CC7A);
 
   static const  kAlertButtonColor=Color(0xffEBEEFF);
   static const  kCardColor=Color(0xfffcf1d6);

@@ -18,5 +18,6 @@ const double cardBorderRadius=16.0;
 const kDMans='DM Sans';
 
 var raleWay=GoogleFonts.raleway().fontFamily!;
+var poppins=GoogleFonts.poppins().fontFamily!;
 
 
