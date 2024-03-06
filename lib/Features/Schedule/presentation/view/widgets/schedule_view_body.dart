@@ -23,9 +23,9 @@ class ScheduleViewBody extends StatelessWidget {
             child: const Column(
               children: [
                 ScheduleViewAppBar(),
-                VerticalSpacer(8),
+                VerticalSpacer(1),
                 CustomDatePicker(),
-                VerticalSpacer(10),
+                VerticalSpacer(1),
               ],
             ),
           ),

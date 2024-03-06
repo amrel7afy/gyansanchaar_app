@@ -35,7 +35,7 @@ class RemainingLecturesSection extends StatelessWidget {
             },),
           ],
         ),
-        const VerticalSpacer(24),
+        const VerticalSpacer(2.4),
         Padding(
           padding: const EdgeInsets.only(bottom: 12),
           child: Row(
@@ -49,7 +49,7 @@ class RemainingLecturesSection extends StatelessWidget {
                   navigateTo(context, AppRouter.syllabusView);
                 },
               ),
-              const HorizontalSpacer(10),
+              const HorizontalSpacer(1),
               RemainingLecturesCard(
                 backGroundColor: MyColors.kCardColor,
                 course: 'Physics 211',
@@ -75,7 +75,7 @@ class RemainingLecturesSection extends StatelessWidget {
                   navigateTo(context, AppRouter.assignmentsView);
                 },
               ),
-              const HorizontalSpacer(10),
+              const HorizontalSpacer(1),
               RemainingLecturesCard(
                 backGroundColor: MyColors.kPrimaryColor,
                 course: 'Physics 211',
@@ -101,7 +101,7 @@ class RemainingLecturesSection extends StatelessWidget {
                   navigateTo(context, AppRouter.attendanceView);
                 },
               ),
-              const HorizontalSpacer(10),
+              const HorizontalSpacer(1),
               RemainingLecturesCard(
                 backGroundColor: MyColors.kCardColor,
                 course: 'Physics 211',

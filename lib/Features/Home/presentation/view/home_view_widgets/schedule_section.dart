@@ -20,7 +20,7 @@ class ScheduleSection extends StatelessWidget {
           'Your Schedule',
           style: MyTextStyles.boldTextStyle24,
         ),
-        const VerticalSpacer(6),
+        const VerticalSpacer(0.6),
         Padding(
           padding: const EdgeInsets.only(right: 42.5),
           child: Row(
@@ -37,7 +37,7 @@ class ScheduleSection extends StatelessWidget {
             ],
           ),
         ),
-        const VerticalSpacer(16),
+        const VerticalSpacer(1.6),
         const ScheduleCard()
       ],
     );

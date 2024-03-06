@@ -17,7 +17,7 @@ class ScheduleViewAppBar extends StatelessWidget {
           '26',
           style: MyTextStyles.semiBoldTextStyle44,
         ),
-        const HorizontalSpacer(8),
+        const HorizontalSpacer(.8),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

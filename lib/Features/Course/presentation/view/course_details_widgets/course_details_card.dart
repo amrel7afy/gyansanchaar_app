@@ -46,7 +46,7 @@ class CourseDetailsCard extends StatelessWidget {
                       style: MyTextStyles.boldTextStyle16
                           .copyWith(color: textColor, fontFamily: raleWay),
                     ),
-                    const VerticalSpacer(5),
+                    const VerticalSpacer(.5),
                     Text(
                       'Prof.  Andrew Grey',
                       style: MyTextStyles.mediumTextStyle12
@@ -61,7 +61,7 @@ class CourseDetailsCard extends StatelessWidget {
                 )
               ],
             ),
-            const VerticalSpacer(16),
+            const VerticalSpacer(1.3),
             Row(
               children: [
                 Column(
@@ -98,7 +98,7 @@ class CourseDetailsCard extends StatelessWidget {
                 const Spacer()
               ],
             ),
-            const VerticalSpacer(12),
+            const VerticalSpacer(1),
             Text(
               'Submission-',
               style: MyTextStyles.extraBoldTextStyle12
@@ -109,7 +109,7 @@ class CourseDetailsCard extends StatelessWidget {
               style: MyTextStyles.mediumTextStyle12
                   .copyWith(color: textColor, fontFamily: raleWay),
             ),
-            const VerticalSpacer(16),
+            const VerticalSpacer(1.6),
             LinearProgressIndicator(
               color: indicatorColor,
               backgroundColor: indicatorBackGroundColor,

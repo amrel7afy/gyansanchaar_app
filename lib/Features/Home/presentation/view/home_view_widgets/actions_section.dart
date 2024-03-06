@@ -28,7 +28,7 @@ class ActionsSection extends StatelessWidget {
                     navigateTo(context, AppRouter.syllabusView);
                   },
                 ),
-                const HorizontalSpacer(10),
+                const HorizontalSpacer(2.3),
                 ActionCard(
                   backGroundColor: MyColors.kCardColor,
                   title: 'Schedule',
@@ -54,7 +54,7 @@ class ActionsSection extends StatelessWidget {
                     navigateTo(context, AppRouter.assignmentsView);
                   },
                 ),
-                const HorizontalSpacer(10),
+                const HorizontalSpacer(2.3),
                 ActionCard(
                   backGroundColor: MyColors.kPrimaryColor,
                   title: 'Tests',
@@ -80,7 +80,7 @@ class ActionsSection extends StatelessWidget {
                     navigateTo(context, AppRouter.attendanceView);
                   },
                 ),
-                const HorizontalSpacer(10),
+                const HorizontalSpacer(2.3),
                 ActionCard(
                   backGroundColor: MyColors.kCardColor,
                   title: 'Extra',

@@ -36,13 +36,13 @@ class CourseDetailsViewBody extends StatelessWidget {
                 CourseDetailsCard(
                   backGroundColor: MyColors.kPrimaryColor,
                 ),
-                VerticalSpacer(20),
+                VerticalSpacer(2),
                 Text('Assignments',style: MyTextStyles.semiBoldTextStyle20,),
-                VerticalSpacer(20),
+                VerticalSpacer(2),
                 CourseAssignmentCard(),
-                VerticalSpacer(20),
+                VerticalSpacer(2),
                 Text('Group work',style: MyTextStyles.semiBoldTextStyle20,),
-                VerticalSpacer(20),
+                VerticalSpacer(2),
                 GroupWorkCard()
               ],
             ),

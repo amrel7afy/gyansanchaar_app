@@ -34,12 +34,12 @@ class ScheduleCard extends StatelessWidget {
                   'Biology',
                   style: MyTextStyles.semiBoldTextStyle22,
                 ),
-                VerticalSpacer(2),
+                VerticalSpacer(1),
                 Text(
                   'Chapter 3 : Animal Kingdom',
                   style: MyTextStyles.semiBoldTextStyle12,
                 ),
-                VerticalSpacer(20),
+                VerticalSpacer(1),
                 ScheduledSubjectTime()
               ],
             ),

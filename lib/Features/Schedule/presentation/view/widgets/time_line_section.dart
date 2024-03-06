@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:gyansanchaar_app/Features/schedule/presentation/view/widgets/schedule_card.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_colors.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_text_styles.dart';
@@ -32,13 +32,13 @@ class TimeLineSection extends StatelessWidget {
                   style: MyTextStyles.mediumTextStyle14
                       .copyWith(color: MyColors.kExtraGreyColor),
                 ),
-                const HorizontalSpacer(28),
+                const HorizontalSpacer(2.8),
                 Text('Course',
                     style: MyTextStyles.mediumTextStyle14
                         .copyWith(color: MyColors.kExtraGreyColor))
               ],
             ),
-            const VerticalSpacer(19),
+            const VerticalSpacer(1.9),
             Expanded(
               child: ListView.builder(
                   itemCount: 10,

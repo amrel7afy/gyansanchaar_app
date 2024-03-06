@@ -13,7 +13,6 @@ class GroupWorkCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Container(
       width: double.infinity,
-      height: 130,
       color: const Color(0xffcfd1d8),
       padding: const EdgeInsets.all(12),
       child: Column(
@@ -24,7 +23,7 @@ class GroupWorkCard extends StatelessWidget {
             style: MyTextStyles.mediumTextStyle12
                 .copyWith( fontFamily: raleWay),
           ),
-          const VerticalSpacer(2),
+          const VerticalSpacer(0.7),
           SizedBox(
             width: getWidth(context) * 0.9,
             child: Text(
@@ -35,13 +34,13 @@ class GroupWorkCard extends StatelessWidget {
               ),
             ),
           ),
-          const VerticalSpacer(8),
+          const VerticalSpacer(.8),
           Text(
             'Submission-',
             style: MyTextStyles.mediumTextStyle12
                 .copyWith( fontFamily: raleWay),
           ),
-          const VerticalSpacer(2),
+          const VerticalSpacer(0.7),
           SizedBox(
             width: getWidth(context) * 0.8,
             child: Text(
@@ -52,7 +51,7 @@ class GroupWorkCard extends StatelessWidget {
               ),
             ),
           ),
-          const VerticalSpacer(8),
+          const VerticalSpacer(.8),
           Row(
             children: [
               Text(

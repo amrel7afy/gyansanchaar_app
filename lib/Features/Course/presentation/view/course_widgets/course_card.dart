@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gyansanchaar_app/core/utils/AppRouter.dart';
 import 'package:gyansanchaar_app/core/utils/constants/constants.dart';
@@ -42,12 +43,14 @@ class CourseCard extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      'Physics 211',
-                      style: MyTextStyles.boldTextStyle16
-                          .copyWith(color: textColor, fontFamily: raleWay),
+                    FittedBox(
+                      child: Text(
+                        'Physics 211',
+                        style: MyTextStyles.boldTextStyle16
+                            .copyWith(color: textColor, fontFamily: raleWay),
+                      ),
                     ),
-                    const VerticalSpacer(5),
+                    const VerticalSpacer(0.6),
                     Text(
                       'Prof.  Andrew Grey',
                       style: MyTextStyles.mediumTextStyle12
@@ -62,7 +65,7 @@ class CourseCard extends StatelessWidget {
                 )
               ],
             ),
-            const VerticalSpacer(16),
+            const VerticalSpacer(1.6),
             LinearProgressIndicator(
               color: indicatorColor,
               backgroundColor: indicatorBackGroundColor,

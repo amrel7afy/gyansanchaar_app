@@ -43,11 +43,11 @@ class CourseViewBody extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                VerticalSpacer(54),
+                VerticalSpacer(5.4),
                 RemainingLecturesSection(),
-                VerticalSpacer(48),
+                VerticalSpacer(4.8),
                 QuickLinksSection(),
-                VerticalSpacer(30),
+                VerticalSpacer(3.0),
               ],
             ),
           ),

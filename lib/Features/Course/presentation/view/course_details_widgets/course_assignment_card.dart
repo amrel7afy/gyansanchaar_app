@@ -12,7 +12,7 @@ class CourseAssignmentCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 160,
+      height: 164,
       color: MyColors.kCardColor,
       padding: const EdgeInsets.all(12),
       child: Column(
@@ -23,7 +23,7 @@ class CourseAssignmentCard extends StatelessWidget {
             style: MyTextStyles.mediumTextStyle12
                 .copyWith(color: MyColors.kPrimaryColor, fontFamily: raleWay),
           ),
-          const VerticalSpacer(2),
+          const VerticalSpacer(1),
           SizedBox(
             width: getWidth(context) * 0.9,
             child: Text(
@@ -35,13 +35,13 @@ class CourseAssignmentCard extends StatelessWidget {
               ),
             ),
           ),
-          const VerticalSpacer(8),
+          const VerticalSpacer(0.9),
           Text(
             'Submission-',
             style: MyTextStyles.mediumTextStyle12
                 .copyWith(color: MyColors.kPrimaryColor, fontFamily: raleWay),
           ),
-          const VerticalSpacer(2),
+          const VerticalSpacer(0.5),
           SizedBox(
             width: getWidth(context) * 0.8,
             child: Text(
@@ -52,7 +52,7 @@ class CourseAssignmentCard extends StatelessWidget {
               ),
             ),
           ),
-          const VerticalSpacer(8),
+          const VerticalSpacer(0.8),
           Row(
             children: [
               Text(

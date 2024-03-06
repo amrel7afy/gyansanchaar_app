@@ -20,7 +20,7 @@ class HomeViewAppBar extends StatelessWidget {
       child: Row(
         children: [
           const ProfileAvatar(),
-          const HorizontalSpacer(12),
+          const HorizontalSpacer(1.2),
           buildTitleAndSubTitle(context),
           const Expanded(child: SizedBox(width: 5,)),
           Container(

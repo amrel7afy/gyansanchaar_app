@@ -17,7 +17,7 @@ class MyDialog extends StatelessWidget {
     return Align(
       alignment: Alignment.center,
       child: Container(
-        height: getHeight(context) * 0.45,
+        height: getHeight(context) * 0.42,
         width: getWidth(context) * 0.8,
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
@@ -40,7 +40,7 @@ class MyDialog extends StatelessWidget {
             width: getWidth(context)*0.4,
             height: getHeight(context)*0.2,
           ),
-          const VerticalSpacer(20),
+          const VerticalSpacer(3),
            Text(
             title,
             style: MyTextStyles.extraBoldTextStyle24,

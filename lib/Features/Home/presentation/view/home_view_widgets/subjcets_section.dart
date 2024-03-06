@@ -23,7 +23,7 @@ class SubjectsSection extends StatelessWidget {
           style: MyTextStyles.boldTextStyle14
               .copyWith(color: MyColors.kGreyColor),
         ),
-        const VerticalSpacer(16),
+        const VerticalSpacer(1.6),
         SizedBox(
           height: 119,
           child: ListView.builder(

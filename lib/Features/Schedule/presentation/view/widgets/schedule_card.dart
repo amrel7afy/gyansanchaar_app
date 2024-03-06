@@ -90,11 +90,11 @@ class CourseTimeLineCard extends StatelessWidget {
                   style: MyTextStyles.mediumTextStyle12
                       .copyWith(color: textColor),
                 ),
-                const VerticalSpacer(13),
+                const VerticalSpacer(0.13),
                 Row(
                   children: [
                     SvgPicture.asset(MyAssets.location,color: iconColor,),
-                    HorizontalSpacer(12),
+                    const HorizontalSpacer(1.2),
                     Text(
                       'Online Mode',
                       style: MyTextStyles.mediumTextStyle12.copyWith(
@@ -102,14 +102,14 @@ class CourseTimeLineCard extends StatelessWidget {
                     ),
                   ],
                 ),
-                const VerticalSpacer(7),
+                const VerticalSpacer(1),
                 Row(
                   children: [
                     CircleAvatar(
                       radius: 8,
                       backgroundImage: NetworkImage(img),
                     ),
-                    HorizontalSpacer(10),
+                    HorizontalSpacer(1),
                     Text(
                       'Brooklyn Williamson',
                       style: MyTextStyles.mediumTextStyle12.copyWith(

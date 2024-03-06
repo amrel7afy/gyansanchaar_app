@@ -8,7 +8,8 @@ import 'package:flutter/material.dart';
 import 'core/utils/constants/theme.dart';
 //dart fix --apply --code=unused_import
 void main(){
-  runApp(const GyansanchaarApp());
+  //runApp(DevicePreview(builder: (context) => const GyansanchaarApp(),));
+runApp(const GyansanchaarApp());
 }
 
 class GyansanchaarApp extends StatelessWidget{
@@ -17,6 +18,7 @@ class GyansanchaarApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
   return  MaterialApp(
+    //builder: DevicePreview.appBuilder,
     debugShowCheckedModeBanner: false,
     theme: themeData,
     onGenerateRoute: AppRouter().generateRoute,

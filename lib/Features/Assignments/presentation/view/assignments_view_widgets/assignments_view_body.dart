@@ -31,20 +31,20 @@ class AssignmentsViewBody extends StatelessWidget {
                 GestureDetector(
                     onTap: () => Navigator.pop(context),
                     child: const Icon(Icons.close)),
-                const VerticalSpacer(24),
+                const VerticalSpacer(1),
                 Text(
                   'Assignments',
                   style: MyTextStyles.boldTextStyle20
                       .copyWith(color: MyColors.kPrimaryColor),
                 ),
-                const VerticalSpacer(35),
+                const VerticalSpacer(2),
                 const DefaultFormField(
                   prefixTitle: 'Title',
                 ),
                 const DefaultFormField(
                   prefixTitle: 'Place',
                 ),
-                const VerticalSpacer(40),
+                const VerticalSpacer(4),
                 const DefaultFormField(
                   prefixTitle: 'Date',
                   suffixWidget: Icon(
@@ -58,14 +58,15 @@ class AssignmentsViewBody extends StatelessWidget {
                 const DefaultFormField(
                   prefixTitle: 'Repeat',
                 ),
-                const VerticalSpacer(28),
+                const VerticalSpacer(4),
                 const DefaultFormField(
                   prefixTitle: 'URL',
                 ),
                 const DefaultFormField(
                   prefixTitle: 'Notes',
-                  maxLines: 3,
+                  maxLines: 4,
                 ),
+                const VerticalSpacer(2),
                 SizedBox(
                   height: 55,
                   width: getWidth(context),

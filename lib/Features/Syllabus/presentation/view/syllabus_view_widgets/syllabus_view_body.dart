@@ -29,9 +29,9 @@ class SyllabusViewBody extends StatelessWidget {
               },
             ),
           ),
-          const VerticalSpacer(10),
+          const VerticalSpacer(1.0),
           buildButton(context),
-          const VerticalSpacer(20)
+          const VerticalSpacer(2.0)
         ],
       ),
     );
