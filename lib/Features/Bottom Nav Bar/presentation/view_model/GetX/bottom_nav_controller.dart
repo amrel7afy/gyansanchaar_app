@@ -6,6 +6,7 @@ import 'package:gyansanchaar_app/Features/Course/presentation/view/course_view.d
 import 'package:gyansanchaar_app/Features/Home/presentation/view/home_view.dart';
 import 'package:gyansanchaar_app/Features/Profile/presentation/view/profile_view.dart';
 import 'package:gyansanchaar_app/core/utils/constants/my_assets.dart';
+import 'package:gyansanchaar_app/core/utils/constants/my_colors.dart';
 
 class BottomNavBarController extends GetxController {
   var tabIndex = 0.obs;
@@ -15,6 +16,12 @@ class BottomNavBarController extends GetxController {
     update();
   }
 
+  Color getIconColor(int index) {
+    return tabIndex.value == index
+        ? MyColors.kPrimaryColor
+        : MyColors.kExtraGreyColor;
+  }
+
   final List<Widget> views = [
     const HomeView(),
     const CourseView(),
@@ -22,27 +29,42 @@ class BottomNavBarController extends GetxController {
     const ProfileView()
   ];
 
-  final List<BottomNavigationBarItem> navBarItems = [
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset(MyAssets.homeFilled,),
-      label: 'Home',
-
-    ),
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset(MyAssets.video,),
-      label: 'Courses',
-
-    ),
-
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset(MyAssets.settings,),
-      label: 'Settings',
-
-    ),
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset(MyAssets.profile,),
-      label: 'Profile',
-
-    ),
-  ].obs;
+  List<BottomNavigationBarItem> get navBarItems => [
+        BottomNavigationBarItem(
+          icon: Builder(
+            builder: (context) => SvgPicture.asset(
+              MyAssets.homeFilled,
+              color: getIconColor(0),
+            ),
+          ),
+          label: 'Home',
+        ),
+        BottomNavigationBarItem(
+          icon: Builder(
+            builder: (context) => SvgPicture.asset(
+              MyAssets.video,
+              color: getIconColor(1),
+            ),
+          ),
+          label: 'Courses',
+        ),
+        BottomNavigationBarItem(
+          icon: Builder(
+            builder: (context) => SvgPicture.asset(
+              MyAssets.bookOpened,
+              color: getIconColor(2),
+            ),
+          ),
+          label: 'Blogs',
+        ),
+        BottomNavigationBarItem(
+          icon: Builder(
+            builder: (context) => SvgPicture.asset(
+              MyAssets.profile,
+              color: getIconColor(3),
+            ),
+          ),
+          label: 'Profile',
+        ),
+      ];
 }
