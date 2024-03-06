@@ -48,7 +48,8 @@ class DefaultFormField extends StatelessWidget {
             hintText: hint,
             hintStyle: MyTextStyles.semiBoldTextStyle14
                 .copyWith(fontFamily: raleWay),
-            suffixIcon: suffixWidget,
+            suffixIcon: IconButton(onPressed:suffixPressed,icon: suffixWidget??Container(width: 1,),),
+
             prefixIcon: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

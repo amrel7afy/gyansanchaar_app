@@ -12,9 +12,9 @@ class AttendanceViewBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SizedBox(height: 20),
+        const SizedBox(height: 18),
         ChipList(),
-        const SizedBox(height: 28),
+        const SizedBox(height: 20),
         const Expanded(child: SingleChildScrollView(child: AttendanceTable())),
         const SizedBox(height: 5),
         const BottomActions(),

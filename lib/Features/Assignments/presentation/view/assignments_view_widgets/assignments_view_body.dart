@@ -13,8 +13,43 @@ import 'package:gyansanchaar_app/core/utils/constants/widgets/search_field.dart'
 import 'package:gyansanchaar_app/core/utils/constants/widgets/show_dialog_method.dart';
 import 'package:gyansanchaar_app/core/utils/constants/widgets/vertical_and_horizontal_space.dart';
 
-class AssignmentsViewBody extends StatelessWidget {
+class AssignmentsViewBody extends StatefulWidget {
   const AssignmentsViewBody({super.key});
+
+  @override
+  State<AssignmentsViewBody> createState() => _AssignmentsViewBodyState();
+}
+
+class _AssignmentsViewBodyState extends State<AssignmentsViewBody> {
+  Future<void> _selectDate(BuildContext context) async {
+    DateTime? picked = await showDatePicker(
+      context: context,
+      initialDate: DateTime.now(),
+      firstDate: DateTime(2000),
+      lastDate: DateTime(2101),
+      builder: (BuildContext context, Widget? child) {
+        return Theme(
+          data: ThemeData.light().copyWith(
+            colorScheme: const ColorScheme.light(
+              primary:MyColors.kPrimaryColor,
+
+            ),
+          textButtonTheme: TextButtonThemeData(
+            style: TextButton.styleFrom(
+              //foregroundColor: Colors.red,
+            ),
+          ),
+
+        ), child: child!);
+      },
+    );
+
+    if (picked != null && picked != DateTime.now()) {
+      setState(() {
+
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -45,12 +80,14 @@ class AssignmentsViewBody extends StatelessWidget {
                   prefixTitle: 'Place',
                 ),
                 const VerticalSpacer(4),
-                const DefaultFormField(
+                 DefaultFormField(
                   prefixTitle: 'Date',
-                  suffixWidget: Icon(
+                  suffixWidget: const Icon(
                     FontAwesomeIcons.solidCalendar,
                     color: MyColors.kPrimaryColor,
+
                   ),
+                  suffixPressed: ()async{_selectDate(context);},
                 ),
                 const DefaultFormField(
                   prefixTitle: 'Time',
@@ -89,6 +126,4 @@ class AssignmentsViewBody extends StatelessWidget {
       ],
     );
   }
-
-
 }
