@@ -9,8 +9,10 @@ import 'package:gyansanchaar_app/Features/assignments/presentation/view/assignme
 import 'package:gyansanchaar_app/Features/home/presentation/view/home_view.dart';
 import 'package:gyansanchaar_app/Features/schedule/presentation/view/schedule_view.dart';
 
+import '../../Features/Bottom Nav Bar/presentation/view/bottom_nav_bar_view..dart';
+
 class AppRouter {
-  static const String homeView = '/';
+  static const String homeView = '/bottomNavBarView';
   static const String bookDetailsView = '/bookDetailsView';
   static const String scheduleView = '/scheduleView';
   static const String assignmentsView = '/assignmentsView';
@@ -20,6 +22,7 @@ class AppRouter {
   static const String testsView = '/testsView';
   static const String courseView = '/courseView';
   static const String courseDetailsView = '/courseDetailsView';
+  static const String bottomNavBarView = '/';
 
   Route? generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -42,6 +45,9 @@ class AppRouter {
       case courseDetailsView:
         return MaterialPageRoute(
             builder: (context) => const CourseDetailsView());
+      case bottomNavBarView:
+        return MaterialPageRoute(
+            builder: (context) => const BottomNavBarView());
     }
     return null;
   }
