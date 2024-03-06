@@ -5,7 +5,19 @@ import 'package:gyansanchaar_app/Features/Attendance/presentation/data/models/st
 
 class AttendanceController extends GetxController {
 
+   List<bool>selections=[true,false,false,false,false,false,false,false].obs;
+  var previousActiveIndex=0;
 
+
+  changeClassSelection(index){
+    log('selections[previousActiveIndex]: ${selections[previousActiveIndex]}');
+    selections[previousActiveIndex]=false;
+    log('selections[previousActiveIndex]: ${selections[previousActiveIndex]}');
+    previousActiveIndex=index;
+    selections[index]=true;
+    log('selections[index]: ${selections[index]}');
+    update();
+  }
   changeAttendanceStatusToPresent(StudentModel student) {
     String status=student.attendanceStatus.name;
     student.attendanceStatus = AttendanceStatus.present;
@@ -67,9 +79,15 @@ class AttendanceController extends GetxController {
     StudentModel(
       name: '10. Name Student',
       attendanceStatus: AttendanceStatus.present,
+    ), StudentModel(
+      name: '11. Name Student',
+      attendanceStatus: AttendanceStatus.present,
+    ), StudentModel(
+      name: '12. Name Student',
+      attendanceStatus: AttendanceStatus.present,
     ),
     StudentModel(
-        name: '11. Name Student',
+        name: '13. Name Student',
         attendanceStatus: AttendanceStatus.absent,
         isLastStudent: true),
   ].obs;

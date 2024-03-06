@@ -10,6 +10,8 @@ const double kLeftCourseViewPadding=17.0;
 
 const double kRightAssignmentsViewPadding=17.0;
 const double kLeftAssignmentsViewPadding=17.0;
+const double kRightAttendanceViewPadding=17.0;
+const double kLeftAttendanceViewPadding=17.0;
 
 
 const double cardBorderRadius=16.0;

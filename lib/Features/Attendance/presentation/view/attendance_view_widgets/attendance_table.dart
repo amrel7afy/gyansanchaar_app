@@ -14,7 +14,10 @@ class AttendanceTable extends GetWidget<AttendanceController> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.symmetric(
+          horizontal: kLeftHomeViewPadding, vertical: 5),
       decoration: BoxDecoration(
+
         border: Border.all(width: 1.2, color: MyColors.kGreyColor),
         borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(5),

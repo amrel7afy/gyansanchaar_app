@@ -6,7 +6,7 @@ import 'package:gyansanchaar_app/core/utils/constants/my_text_styles.dart';
 AppBar buildAppBar(BuildContext context,{required String title}) {
   return AppBar(
     titleSpacing: 00.0,
-    leadingWidth: 80,
+    leadingWidth: 50,
     leading: IconButton(
       icon: const Icon(
         Icons.close,
