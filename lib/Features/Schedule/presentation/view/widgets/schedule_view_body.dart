@@ -20,12 +20,12 @@ class ScheduleViewBody extends StatelessWidget {
         SliverToBoxAdapter(
           child: Padding(
             padding: padding,
-            child: const Column(
+            child:   Column(
               children: [
                 ScheduleViewAppBar(),
-                VerticalSpacer(1),
-                CustomDatePicker(),
-                VerticalSpacer(1),
+                const  VerticalSpacer(1),
+                const    CustomDatePicker(),
+                const VerticalSpacer(1),
               ],
             ),
           ),

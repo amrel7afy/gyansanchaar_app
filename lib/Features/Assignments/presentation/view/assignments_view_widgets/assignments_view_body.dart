@@ -1,8 +1,7 @@
-
 import 'package:flutter/material.dart';
 
-
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:gyansanchaar_app/Features/Assignments/presentation/view/assignments_view_widgets/build_drop_down_menu.dart';
 
 import 'package:gyansanchaar_app/core/utils/constants/constants.dart';
 import 'package:gyansanchaar_app/core/utils/constants/methods.dart';
@@ -21,6 +20,14 @@ class AssignmentsViewBody extends StatefulWidget {
 }
 
 class _AssignmentsViewBodyState extends State<AssignmentsViewBody> {
+  TextEditingController titleController = TextEditingController();
+  TextEditingController placeController = TextEditingController();
+  TextEditingController dateController = TextEditingController();
+  TextEditingController timeController = TextEditingController();
+  TextEditingController repeatController = TextEditingController();
+  TextEditingController urlController = TextEditingController();
+  TextEditingController notesController = TextEditingController();
+
   Future<void> _selectDate(BuildContext context) async {
     DateTime? picked = await showDatePicker(
       context: context,
@@ -29,24 +36,26 @@ class _AssignmentsViewBodyState extends State<AssignmentsViewBody> {
       lastDate: DateTime(2101),
       builder: (BuildContext context, Widget? child) {
         return Theme(
-          data: ThemeData.light().copyWith(
-            colorScheme: const ColorScheme.light(
-              primary:MyColors.kPrimaryColor,
-
+            data: ThemeData.light().copyWith(
+              colorScheme: const ColorScheme.light(
+                primary: MyColors.kPrimaryColor,
+              ),
+              textButtonTheme: TextButtonThemeData(
+                style: TextButton.styleFrom(
+                    //foregroundColor: Colors.red,
+                    ),
+              ),
             ),
-          textButtonTheme: TextButtonThemeData(
-            style: TextButton.styleFrom(
-              //foregroundColor: Colors.red,
-            ),
-          ),
-
-        ), child: child!);
+            child: child!);
       },
     );
 
     if (picked != null && picked != DateTime.now()) {
       setState(() {
-
+        // Format the date as 'yyyy-MM-dd'
+        String formattedDate =
+            "${picked.year}/${picked.month.toString()}/${picked.day.toString()}";
+        dateController.text = formattedDate;
       });
     }
   }
@@ -73,33 +82,47 @@ class _AssignmentsViewBodyState extends State<AssignmentsViewBody> {
                       .copyWith(color: MyColors.kPrimaryColor),
                 ),
                 const VerticalSpacer(2),
-                const DefaultFormField(
+                DefaultFormField(
+                  controller: titleController,
                   prefixTitle: 'Title',
                 ),
-                const DefaultFormField(
+                DefaultFormField(
+                  controller: placeController,
                   prefixTitle: 'Place',
                 ),
                 const VerticalSpacer(4),
-                 DefaultFormField(
+                DefaultFormField(
+                  controller: dateController,
                   prefixTitle: 'Date',
                   suffixWidget: const Icon(
                     FontAwesomeIcons.solidCalendar,
                     color: MyColors.kPrimaryColor,
-
                   ),
-                  suffixPressed: ()async{_selectDate(context);},
+                  suffixPressed: () async {
+                    _selectDate(context);
+                  },
                 ),
-                const DefaultFormField(
-                  prefixTitle: 'Time',
-                ),
-                const DefaultFormField(
+                DefaultFormField(
+                    controller: timeController,
+                    prefixTitle: 'Time',
+                    suffixWidget: CustomDropDownMenu(
+                        items: timeItems,
+                        dropDownItemValue: dropDownItemValue)),
+                DefaultFormField(
+                  controller: repeatController,
                   prefixTitle: 'Repeat',
+                   suffixWidget:  CustomDropDownMenu(
+                        items: repeatItems,
+                        dropDownItemValue: dropDownItemValue2)
                 ),
                 const VerticalSpacer(4),
-                const DefaultFormField(
+                DefaultFormField(
+                  controller: urlController,
                   prefixTitle: 'URL',
                 ),
-                const DefaultFormField(
+                NotesFormField(
+                  hint: 'Write notes',
+                  controller: notesController,
                   prefixTitle: 'Notes',
                   maxLines: 4,
                 ),
@@ -114,8 +137,10 @@ class _AssignmentsViewBodyState extends State<AssignmentsViewBody> {
                     text: 'Create',
                     backGroundColor: MyColors.kPrimaryColor,
                     onPressed: () {
-
-                      buildShowDialog(context, title: 'Created Successfully', subTitle: 'Your Assignment has been Created successfully ');
+                      buildShowDialog(context,
+                          title: 'Created Successfully',
+                          subTitle:
+                              'Your Assignment has been Created successfully ');
                     },
                   ),
                 )

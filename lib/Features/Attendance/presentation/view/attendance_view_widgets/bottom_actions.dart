@@ -19,8 +19,8 @@ class BottomActions extends StatefulWidget {
   State<BottomActions> createState() => _BottomActionsState();
 }
 
-
-
+DateTime dateTime=DateTime.now();
+String date= "${dateTime.day.toString()}/${dateTime.month.toString()}/${dateTime.year.toString().substring(2)}";
 class _BottomActionsState extends State<BottomActions> {
 
   Future<void> _selectDate(BuildContext context) async {
@@ -44,7 +44,10 @@ class _BottomActionsState extends State<BottomActions> {
 
     if (picked != null && picked != DateTime.now()) {
       setState(() {
-        
+        // Format the date as 'yyyy-MM-dd'
+        String formattedDate =
+            "${picked.day.toString()}/${picked.month.toString()}/${picked.year.toString().substring(2)}";
+        date = formattedDate;
       });
     }
   }
@@ -72,7 +75,7 @@ class _BottomActionsState extends State<BottomActions> {
                     borderRadius: BorderRadius.circular(
                         10), // Match the border radius above
                   ),
-                  child: Text('13/4/24',
+                  child: Text(date,
                       style: MyTextStyles.boldTextStyle24
                           .copyWith(color: MyColors.kPrimaryColor)),
                 ),

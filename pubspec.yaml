@@ -42,6 +42,7 @@ dependencies:
   font_awesome_flutter:
   get:
   device_preview:
+  intl:
 
 
 dev_dependencies:
