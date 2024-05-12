@@ -12,8 +12,7 @@ import 'package:gyansanchaar_app/Features/schedule/presentation/view/schedule_vi
 import '../../Features/Bottom Nav Bar/presentation/view/bottom_nav_bar_view..dart';
 
 class AppRouter {
-  static const String homeView = '/bottomNavBarView';
-  static const String bookDetailsView = '/bookDetailsView';
+  static const String homeView = '/homeView';
   static const String scheduleView = '/scheduleView';
   static const String assignmentsView = '/assignmentsView';
   static const String attendanceView = '/attendanceView';

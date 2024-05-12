@@ -15,7 +15,7 @@ class CustomDatePicker extends StatelessWidget {
     return GetBuilder<ScheduleController>(
       builder: (logic) {
         return SizedBox(
-          height: 68,
+          height: 80,
           child: DatePicker(
             initialSelectedDate: DateTime.now(),
             width: 48,
